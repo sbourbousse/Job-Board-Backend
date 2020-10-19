@@ -1,7 +1,7 @@
 var express = require('express');
 var mysql = require('mysql');
 var cors = require('cors')
-
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.use(cors());
@@ -453,4 +453,4 @@ app.delete('/panel/:nomTable', function(req, res) {
   });
 });
 
-app.listen(80);
+server.listen(port, () => console.log(`Listening on ${port}`));
